@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const cors = require('cors')
+// const cors = require('cors')
 
 let notes = [
   {
@@ -30,7 +30,7 @@ const requestLogger = (request, response, next) => {
 
 app.use(express.json())
 app.use(requestLogger)
-app.use(cors())
+// app.use(cors())
 app.use(express.static('dist'))
 
 app.get('/', (request, response) => {
